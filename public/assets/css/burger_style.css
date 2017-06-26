@@ -1,0 +1,16 @@
+h1 {
+    color: red;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+#add-burger {
+    text-align: center;
+}
+
+#add-button {
+    margin-top: 5px;
+}
