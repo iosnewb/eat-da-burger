@@ -2,17 +2,18 @@
 
 <div class="row">
   <div class="col-md-6">
-    <ul>
+    <ul class="list-group">
       {{#each burger}}
         {{#unless this.devoured}}
-          <p>
+          <li class="list-group-item">
             {{this.burger_name}}
-          </p>
-
             <form action="/{{this.id}}?_method=PUT" method="POST">
               <input type="hidden" name="devour" value="false">
               <button type="submit">DEVOUR IT!</button>
             </form>
+          </li>
+
+            
           
         {{/unless}}
       {{/each}}
@@ -20,10 +21,10 @@
   </div>
 
   <div class="col-md-6">
-    <ul>
+    <ul class="list-group">
       {{#each burger}}
         {{#if this.devoured}}
-          <li>
+          <li class="list-group-item">
             {{this.burger_name}}
           </li>
         {{/if}}
